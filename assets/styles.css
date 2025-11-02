@@ -1,0 +1,198 @@
+/* Global text / base */
+body {
+  margin: 0;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+/* ─────────────────────────
+   TOP NAV BAR (light grey like screenshot #2)
+   ───────────────────────── */
+.topbar {
+  background-color: #f7f7fa; /* very light grey / grey-lavender */
+  color: #1a1a1a;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  padding: 10px 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.site-name {
+  color: #1a1a1a;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.site-nav a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* ─────────────────────────
+   PAGE WRAPPER
+   ───────────────────────── */
+.page {
+  max-width: 1100px;
+  margin: 24px auto 80px auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+  color: #1a1a1a;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ─────────────────────────
+   HERO ROW (photo + links, and About/Timeline)
+   ───────────────────────── */
+.hero-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+/* LEFT COLUMN */
+.hero-left {
+  flex: 0 0 260px;
+  max-width: 260px;
+}
+
+.pfp {
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.06);
+  margin-bottom: 16px;
+}
+
+/* Links under profile image */
+.social-block {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #1a1a1a;
+}
+
+.social-line {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Fake icons like his little "in" / "G" */
+.social-icon {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.linkedin-icon {
+  /* small black 'in' block vibe would normally be an SVG,
+     we keep text for now */
+}
+
+.scholar-icon {
+  /* same idea for 'G' */
+}
+
+.social-link {
+  color: #0060c9;
+  text-decoration: none;
+  word-break: break-word;
+  font-size: 14px;
+}
+.social-link:hover {
+  text-decoration: underline;
+}
+
+/* RIGHT COLUMN */
+.hero-right {
+  flex: 1 1 400px;
+  min-width: 260px;
+  max-width: 780px;
+  color: #1a1a1a;
+}
+
+/* "About" and "Timeline" headings */
+.section-heading {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+  color: #1a1a1a;
+}
+
+/* body text */
+.about-text {
+  margin: 0 0 12px 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
+/* Timeline list next to About */
+.timeline-list {
+  list-style-type: disc;
+  margin: 0 0 24px 20px;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+.timeline-list li {
+  margin-bottom: 8px;
+}
+
+.timeline-list strong {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+/* ─────────────────────────
+   FOOTER
+   ───────────────────────── */
+.footer-note {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #666;
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: 0;
+}
