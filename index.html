@@ -1,106 +1,92 @@
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ayush Roy</title>
-  <link rel="stylesheet" href="assets/styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ayush Roy, Computer Science PhD student at Virginia Tech. Research in immersive analytics, spatial interaction, and collaborative sensemaking.">
+  <title>Ayush Roy | About & Research</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/main.js" defer></script>
 </head>
 <body>
-
-  <!-- Top light-grey nav bar -->
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="topbar">
-    <div class="topbar-inner">
-      <div class="site-name">Ayush Roy</div>
-      <nav class="site-nav">
-        <a href="#about">About</a>
+    <div class="nav-inner">
+      <a class="site-name" href="#about">Ayush Roy</a>
+      <nav aria-label="Main navigation">
+        <a href="#about" aria-current="location">About</a>
+        <a href="#timeline">Timeline</a>
         <a href="#publications">Publications</a>
+        <a href="#research">Research</a>
         <a href="#cv">CV</a>
       </nav>
     </div>
   </header>
-
-  <main class="page">
-
-    <!-- HERO ROW = photo + links on left, About + Timeline on right -->
-    <section id="about" class="hero-row">
-
-      <!-- LEFT COLUMN -->
-      <div class="hero-left">
-        <img src="assets/image_1.jpg" alt="Ayush Roy" class="pfp" />
-
-        <div class="social-block">
-          <div class="social-line">
-            <span class="social-icon linkedin-icon">in</span>
-            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_HERE" class="social-link">
-              LinkedIn
-            </a>
-          </div>
-
-          <div class="social-line">
-            <span class="social-icon scholar-icon">G</span>
-            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-link">
-              Google Scholar
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- RIGHT COLUMN -->
-      <div class="hero-right">
-
-        <!-- ABOUT -->
-        <h1 class="section-heading">About</h1>
-
-        <p class="about-text">
-          Hi 👋 I'm Ayush. I work on real-time XR / VR systems, rail maintenance AI, and automation for
-          operations analytics.
-        </p>
-
-        <p class="about-text">
-          I build systems for:
-        </p>
-
-        <p class="about-text">
-          • Real-time XR / VR systems (Quest Pro, Unity, gaze-based interaction) <br />
-          • Rail maintenance AI (fluorescence sensing, Jetson Orin, signal processing) <br />
-          • Automation / dashboards for operations and analytics
-        </p>
-
-        <p class="about-text">
-          My work focuses on taking messy physical-world signals (sensors, maintenance data, human
-          attention in VR) and turning them into something you can act on <strong>right now</strong>,
-          not after a report next week.
-        </p>
-
-        <!-- TIMELINE -->
-        <h2 class="section-heading" id="timeline">Timeline</h2>
-
-        <ul class="timeline-list">
-          <li>
-            <strong>Sep. 2025</strong> Built an end-to-end rail lubrication monitoring pipeline using
-            fluorescence sensing and edge compute to support real-time maintenance decisions in the field.
-          </li>
-          <li>
-            <strong>Jul. 2025</strong> Prototyped a multi-user VR analytics workspace so teams can explore
-            documents, clusters, and notes together in 3D instead of screen-sharing slides.
-          </li>
-          <li>
-            <strong>May 2025</strong> Developed gaze-based interaction for Quest Pro to enable hands-free,
-            attention-driven analytics review in VR.
-          </li>
-          <li>
-            <strong>Dec. 2024</strong> Automated reporting/data-entry pipelines so non-technical teams
-            could self-serve analytics, replacing manual spreadsheet work.
-          </li>
+  <main id="main" class="page" tabindex="-1">
+    <aside class="profile" aria-label="Profile and contact links">
+      <img class="profile-photo" src="assets/image_1.jpg" alt="Ayush Roy" width="216" height="216">
+      <ul class="profile-links">
+        <li><span class="icon linkedin" aria-hidden="true">in</span><a href="https://www.linkedin.com/in/ayush-roy" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .8a11.3 11.3 0 0 0-3.6 22c.6.1.8-.2.8-.5v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.6-1.3-1.6-1.1-.8.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3 0 0 1-.3 3.1 1.2a10.7 10.7 0 0 1 5.8 0c2.2-1.5 3.1-1.2 3.1-1.2.6 1.5.2 2.7.1 3 .8.8 1.2 1.8 1.2 3.1 0 4.4-2.8 5.4-5.5 5.7.4.4.8 1.1.8 2.2v3.1c0 .3.2.6.8.5A11.3 11.3 0 0 0 12 .8Z"/></svg><a href="https://github.com/ayushrroy" target="_blank" rel="noopener">GitHub</a></li>
+        <li><span class="icon" aria-hidden="true">✉</span><a href="mailto:ayushroy24@vt.edu">Email</a></li>
+        <li><span class="icon document" aria-hidden="true">▤</span><a href="assets/ayush-roy-resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+      </ul>
+    </aside>
+    <div class="content">
+      <section id="about" aria-labelledby="about-title">
+        <h1 id="about-title">About</h1>
+        <p>I am a second-year PhD student in Computer Science at Virginia Tech, advised by Dr. Doug Bowman. My research explores how people organize information, make sense of complex data, and collaborate in immersive environments, with an interest in how AI can further support these activities.</p>
+        <p>I design and evaluate XR interaction techniques through controlled experiments and mixed-methods user studies, with the long-term goal of making immersive computing a practical alternative to traditional desktop computing.</p>
+      </section>
+      <section id="timeline" aria-labelledby="timeline-title">
+        <h2 id="timeline-title">Timeline</h2>
+        <ul class="timeline">
+          <li><strong>Mar. 2026</strong> Served as a judge for the AWS–Virginia Tech CS Careers Hackathon.</li>
+          <li><strong>Mar. 2026</strong> Completed a controlled study with 35 participants on link routing and bundling in immersive workspaces; the manuscript is under review.</li>
+          <li><strong>Jan. 2026</strong> Started serving as President of the CHCI Student Council at Virginia Tech.</li>
+          <li><strong>Oct. 2025</strong> Co-authored <a href="https://ieeexplore.ieee.org/document/11220535" target="_blank" rel="noopener">Exploring Organizational Strategies in Immersive Computational Notebooks</a>, published at IEEE ISMAR 2025.</li>
+          <li><strong>Apr. 2025</strong> Organized the CHCI Research Symposium with 22 presentations and 75 attendees.</li>
+          <li><strong>Jan. 2025</strong> Joined the PhD program in Computer Science at Virginia Tech, advised by Dr. Doug Bowman.</li>
+          <li><strong>Jan. 2023</strong> Began Master of Engineering studies in Computer Science at Virginia Tech; subsequently transferred to the PhD program.</li>
+          <li><strong>Sep. 2021</strong> Received the Pfizer Champ Award and Rise Insta Award at Infosys.</li>
+          <li><strong>Mar. 2021</strong> Joined Infosys as a Software Engineer in Pune, India.</li>
+          <li><strong>Dec. 2020</strong> Completed my BTech in Information Technology at Guru Gobind Singh Indraprastha University.</li>
         </ul>
-
-      </div>
-    </section>
-
-    <!-- Placeholder anchors for nav links so they don't 404 -->
-    <section id="publications"></section>
-    <section id="cv"></section>
-
+      </section>
+      <section id="publications" class="lower-section" aria-labelledby="publications-title">
+        <h2 id="publications-title">Publications</h2>
+        <h3 class="year-heading">2025</h3>
+        <article class="publication">
+          <h4><a href="https://ieeexplore.ieee.org/document/11220535" target="_blank" rel="noopener">Exploring Organizational Strategies in Immersive Computational Notebooks</a></h4>
+          <p>S. In, <strong>A. Roy</strong>, E. Krokos, K. Whitley, C. North, Y. Yang<br><em>IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2025)</em></p>
+        </article>
+        <h3>Manuscripts</h3>
+        <p class="note">Work under review and in preparation, as listed in my resume.</p>
+        <article class="publication"><h4>Towards AI-Assisted Organization in Immersive Computational Notebooks</h4><p><span class="status">Under review</span> · A 24-participant study of three levels of AI involvement in spatial notebook organization.</p></article>
+        <article class="publication"><h4>Understanding Asynchronous Collaborative Sensemaking Through a Multi-Session Exploratory Study in Immersive Workspaces</h4><p><span class="status">In preparation for CSCW 2027</span> · A multi-session exploratory study with 30 participants, combining behavioral analysis and semi-structured interviews.</p></article>
+        <article class="publication"><h4>Characterizing Cognitive Load in Immersive Spaces to Think</h4><p><span class="status">Under review</span> · A 24-participant study using eye tracking, physiological signals, interaction behavior, and subjective workload measures.</p></article>
+        <article class="publication"><h4>Evaluating Link Visualization Techniques for Sensemaking in Immersive Workspaces</h4><p><span class="status">Under review · March 2026</span> · A controlled 2 × 3 study evaluating link routing and bundling with 35 participants.</p></article>
+      </section>
+      <section id="research" class="lower-section" aria-labelledby="research-title">
+        <h2 id="research-title">Research</h2>
+        <article class="research-item"><h3>Collaborative Spatial Negotiation in XR</h3><p>I am leading a project in preparation for the IEEE VR 2027 3DUI Contest, designing dual-proposal visualizations, dynamic rubber-band feedback, and perspective switching to help collaborators negotiate shared placements.</p></article>
+        <article class="research-item"><h3>Subtle Gaze Guidance in VR</h3><p>I designed a within-subject eye-tracking study with 18 participants and six cue conditions to investigate how subtle cues redirect attention. I also designed a follow-up study exploring character perception, trust, and narrative understanding in 360° experiences.</p></article>
+        <article class="research-item"><h3>Multi-Agent Debiasing with Search-Based Validation</h3><p>I designed a Judge + Rephrase framework with a search agent to iteratively debias LLM reasoning, evaluated across four models using BBQ-Hard and SQuAD v2. <a href="https://github.com/Mughees2001/Multi-Agent-Debiasing-Framework" target="_blank" rel="noopener">Code on GitHub</a>.</p></article>
+      </section>
+      <section id="cv" class="lower-section" aria-labelledby="cv-title">
+        <h2 id="cv-title">CV</h2>
+        <p><a href="assets/ayush-roy-resume.pdf" target="_blank" rel="noopener">View my resume (PDF)</a></p>
+        <h3>Education</h3>
+        <ul><li><strong>PhD, Computer Science</strong> — Virginia Tech, January 2025–present. Expected graduation: Spring 2029.</li><li><strong>Master of Engineering studies, Computer Science</strong> — Virginia Tech, January 2023–December 2024; transferred to the PhD program.</li><li><strong>BTech, Information Technology</strong> — Guru Gobind Singh Indraprastha University, August 2016–December 2020.</li></ul>
+        <h3>Skills</h3>
+        <dl class="skills"><dt>HCI & UX Research</dt><dd>Mixed-methods studies, experimental design, qualitative coding, semi-structured interviews, think-aloud, surveys, Figma.</dd><dt>XR Prototyping</dt><dd>Unity, C#, OpenXR, MRTK, Meta XR SDK, Android XR.</dd><dt>Analytics</dt><dd>Eye tracking, gaze analysis, behavioral logs, statistical modeling, data visualization, Python, Pandas, ATLAS.ti.</dd><dt>AI & ML</dt><dd>PyTorch, TensorFlow, scikit-learn, multi-agent systems, LLM integration, RAG, LangChain, LangGraph.</dd></dl>
+        <h3>Industry Experience</h3><p><strong>Software Engineer, Infosys</strong> · Pune, India · March 2021–January 2023<br>Automated financial computations for 400,000+ records, reducing computation time from 60 seconds to 200 milliseconds. Worked with ASP.NET MVC, Angular.js, T-SQL, and Azure DevOps.</p>
+        <h3>Leadership & Service</h3><p><strong>President, CHCI Student Council</strong> · January 2026–present<br>Led community events, research workshops, and conference presentation practice sessions.</p><p><strong>Reviewer:</strong> IEEE VR (2025, 2026), ISMAR (2025, 2026), ACM IUI (2025), and ICXR (2026).</p><p><strong>Judge:</strong> AWS–Virginia Tech CS Careers Hackathon, March 2026.</p>
+        <h3>Contact</h3><p>Blacksburg, Virginia, USA<br><a href="mailto:ayushroy24@vt.edu">ayushroy24@vt.edu</a></p>
+      </section>
+      <footer><span>© <span id="year">2026</span> Ayush Roy</span><a href="#about">Back to top</a></footer>
+    </div>
   </main>
 </body>
 </html>
+
