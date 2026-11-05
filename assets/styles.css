@@ -86,6 +86,8 @@ body { margin: 0; background: #fff; }
 #portfolio-review .compact-publication h4 { font-size: 16px; font-weight: 500; line-height: 1.45; margin: 0 0 4px; color: var(--pf-link); }
 #portfolio-review .compact-publication h4 a { text-decoration: none; }
 #portfolio-review .compact-publication h4 a:hover { text-decoration: underline; }
+#portfolio-review .compact-publication h3 { font-size: 16px; font-weight: 500; line-height: 1.45; margin: 0 0 4px; color: var(--pf-link); }
+#portfolio-review .compact-publication .research-context { font-size: 13px; padding: 6px 0 0; }
 #portfolio-review .compact-publication .pf-meta { font-size: 13px; line-height: 1.4; margin: 0 0 5px; }
 #portfolio-review .compact-publication .pf-status { margin: 0 0 7px; }
 #portfolio-review .publication-abstract { font-size: 13px; margin-top: 6px; }
