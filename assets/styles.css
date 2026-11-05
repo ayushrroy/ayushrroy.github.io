@@ -89,6 +89,7 @@ body { margin: 0; background: #fff; }
 #portfolio-review .compact-publication .thumbnail-links img { object-fit: cover; object-position: center top; transform: scale(1.5); transform-origin: center 20%; }
 #portfolio-review .compact-publication .thumbnail-gaze img { object-fit: cover; object-position: center; }
 #portfolio-review .compact-publication img[src$="spatial-negotiation-thumbnail.png"] { object-fit: cover; transform: scale(1.2); transform-origin: center 65%; }
+#portfolio-review .compact-publication img[src$="spatial-negotiation-placement-teaser.png"] { object-fit: contain; }
 #portfolio-review .publication-body { grid-column: 2; min-width: 0; }
 #portfolio-review .compact-publication h4 { font-size: 16px; font-weight: 500; line-height: 1.45; margin: 0 0 4px; color: var(--pf-link); }
 #portfolio-review .compact-publication h4 a { text-decoration: none; }
