@@ -79,9 +79,15 @@ body { margin: 0; background: #fff; }
 #portfolio-review .pf-profile ul { width: fit-content; max-width: 100%; margin: 20px auto 0; text-align: left; }
 #portfolio-review .pf-profile li { flex-wrap: nowrap; align-items: center; gap: 9px; }
 #portfolio-review .profile-icon { width: 16px; height: 16px; flex: 0 0 16px; color: #62666a; }
-#portfolio-review .compact-publication { display: grid; grid-template-columns: 140px minmax(0,1fr); gap: 0 24px; padding: 0 0 20px; margin: 0 0 20px; }
+#portfolio-review .compact-publication { display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 0 24px; padding: 0 0 20px; margin: 0 0 20px; }
 #portfolio-review .compact-publication .teaser { grid-column: 1; grid-row: 1; margin: 2px 0 0; }
-#portfolio-review .compact-publication .teaser img { width: 140px; height: 100px; object-fit: contain; background: #f8f9fa; border-radius: 4px; border: 1px solid #e4e6e8; }
+#portfolio-review .compact-publication .teaser { width: 200px; height: 130px; border-radius: 5px; border: 1px solid #e4e6e8; overflow: hidden; background: #f8f9fa; }
+#portfolio-review .compact-publication .teaser a { display: block; width: 100%; height: 100%; }
+#portfolio-review .compact-publication .teaser img { width: 100%; height: 100%; object-fit: contain; }
+#portfolio-review .compact-publication .thumbnail-async img { object-fit: cover; object-position: 28% center; }
+#portfolio-review .compact-publication .thumbnail-cognitive img { object-fit: cover; object-position: center top; transform: scale(1.45); transform-origin: center top; }
+#portfolio-review .compact-publication .thumbnail-links img { object-fit: cover; object-position: center top; transform: scale(1.3); transform-origin: center top; }
+#portfolio-review .compact-publication .thumbnail-gaze img { object-fit: cover; object-position: center; }
 #portfolio-review .publication-body { grid-column: 2; min-width: 0; }
 #portfolio-review .compact-publication h4 { font-size: 16px; font-weight: 500; line-height: 1.45; margin: 0 0 4px; color: var(--pf-link); }
 #portfolio-review .compact-publication h4 a { text-decoration: none; }
@@ -98,7 +104,7 @@ body { margin: 0; background: #fff; }
 #portfolio-review .publication-abstract .abstract p { font-size: 14px; line-height: 1.6; }
 #portfolio-review .publication-resource, #portfolio-review .compact-publication .pf-links a { display: inline-block; font-size: 12px; padding: 3px 8px; border: 1px solid #d5dce6; border-radius: 3px; text-decoration: none; }
 #portfolio-review .compact-publication .pf-links { margin-top: 7px; }
-@media(max-width:600px) { #portfolio-review .compact-publication { grid-template-columns: 100px minmax(0,1fr); column-gap: 14px; } #portfolio-review .compact-publication .teaser img { width: 100px; height: 80px; } }
-@media(max-width:420px) { #portfolio-review .compact-publication { grid-template-columns: 76px minmax(0,1fr); column-gap: 12px; } #portfolio-review .compact-publication .teaser img { width: 76px; height: 64px; } #portfolio-review .compact-publication h4 { font-size: 15px; } }
+@media(max-width:600px) { #portfolio-review .compact-publication { grid-template-columns: 120px minmax(0,1fr); column-gap: 14px; } #portfolio-review .compact-publication .teaser { width: 120px; height: 90px; } }
+@media(max-width:420px) { #portfolio-review .compact-publication { grid-template-columns: 100px minmax(0,1fr); column-gap: 12px; } #portfolio-review .compact-publication .teaser { width: 100px; height: 76px; } #portfolio-review .compact-publication h4 { font-size: 15px; } }
 @media(max-width:767px) { #portfolio-review .pf-profile { text-align: left; align-items: center; } #portfolio-review .pf-photo { margin: 0; } #portfolio-review .pf-profile ul { width: 100%; } }
 @media(max-width:370px) { #portfolio-review .pf-profile { text-align: center; } #portfolio-review .pf-photo { margin: 0 auto 18px; } }
