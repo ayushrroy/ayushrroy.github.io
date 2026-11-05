@@ -1,7 +1,7 @@
-// Native anchors keep the page usable even without JavaScript.
 const header = document.querySelector('.pf-bar');
-const links = [...document.querySelectorAll('.pf-nav a[href^="#"]')];
-const sections = links.map(link => document.querySelector(link.hash));
+const links = [...document.querySelectorAll('.pf-nav a[data-section]')];
+const sections = links.map(link => document.getElementById(link.dataset.section));
+const routeLinks = [...document.querySelectorAll('a[data-section]')];
 
 function updateNavigation() {
   const threshold = header.getBoundingClientRect().height + 90;
@@ -9,11 +9,9 @@ function updateNavigation() {
   for (const section of sections) {
     if (section.getBoundingClientRect().top <= threshold) current = section;
   }
-  if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
-    current = sections.at(-1);
-  }
+  if (innerHeight + scrollY >= document.documentElement.scrollHeight - 4) current = sections.at(-1);
   for (const link of links) {
-    if (link.hash === `#${current.id}`) link.setAttribute('aria-current', 'location');
+    if (link.dataset.section === current.id) link.setAttribute('aria-current', 'location');
     else link.removeAttribute('aria-current');
   }
 }
@@ -23,15 +21,33 @@ function updateHeader() {
   updateNavigation();
 }
 
+function showRoute() {
+  const path = location.pathname.replace(/\/$/, '') || '/about';
+  const legacy = location.hash && document.getElementById(location.hash.slice(1));
+  const link = links.find(item => legacy ? item.dataset.section === legacy.id : item.pathname === path);
+  if (!link) return;
+  history.replaceState(null, '', link.pathname);
+  document.getElementById(link.dataset.section).scrollIntoView({behavior: 'instant', block: 'start'});
+  updateNavigation();
+}
+
+for (const link of routeLinks) {
+  link.addEventListener('click', event => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    if (location.pathname !== link.pathname || location.hash) history.pushState(null, '', link.pathname);
+    document.getElementById(link.dataset.section).scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start'});
+  });
+}
+
 let pending = false;
-window.addEventListener('scroll', () => {
+addEventListener('scroll', () => {
   if (pending) return;
   pending = true;
-  requestAnimationFrame(() => {
-    updateNavigation();
-    pending = false;
-  });
-}, { passive: true });
+  requestAnimationFrame(() => { updateNavigation(); pending = false; });
+}, {passive: true});
 new ResizeObserver(updateHeader).observe(header);
-window.addEventListener('load', updateHeader);
+addEventListener('load', () => { updateHeader(); showRoute(); });
+addEventListener('popstate', showRoute);
+addEventListener('hashchange', showRoute);
 document.querySelector('#year').textContent = new Date().getFullYear();
