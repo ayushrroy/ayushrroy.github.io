@@ -22,7 +22,8 @@ function updateHeader() {
 }
 
 function showRoute() {
-  const path = location.pathname.replace(/\/$/, '') || '/about';
+  const requestedPath = location.pathname.replace(/\/$/, '') || '/about';
+  const path = requestedPath === '/timeline' ? '/news' : requestedPath;
   const legacy = location.hash && document.getElementById(location.hash.slice(1));
   const link = links.find(item => legacy ? item.dataset.section === legacy.id : item.pathname === path);
   if (!link) return;
