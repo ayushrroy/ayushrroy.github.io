@@ -112,9 +112,9 @@ body { margin: 0; background: #fff; }
 @media(max-width:767px) { #portfolio-review .pf-profile { text-align: left; align-items: center; } #portfolio-review .pf-photo { margin: 0; } #portfolio-review .pf-profile ul { width: 100%; } }
 @media(max-width:370px) { #portfolio-review .pf-profile { text-align: center; } #portfolio-review .pf-photo { margin: 0 auto 18px; } }
 
-#portfolio-review .pf-research-vision { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 24px; align-items: center; margin: 0 0 12px; }
+#portfolio-review .pf-research-vision { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.083333fr); gap: 24px; align-items: center; width: 100%; max-width: 524px; margin: 0 0 12px; }
 #portfolio-review .pf-vision-label { font-size: 12px; color: var(--pf-muted); margin: 22px 0 20px; }
-#portfolio-review .pf-vision-goal { font-size: 22px; font-weight: 500; line-height: 1.4; margin: 0; }
+#portfolio-review .pf-vision-goal { font-size: 22px; font-weight: 700; line-height: 1.4; margin: 0; }
 #portfolio-review .pf-research-vision img { display: block; width: 100%; height: auto; }
 #portfolio-review .pf-vision-credit { font-size: 11px; color: var(--pf-muted); line-height: 1.5; margin: 0 0 26px; }
-@media(max-width:700px) { #portfolio-review .pf-research-vision { grid-template-columns: minmax(0, 1fr); gap: 14px; } }
+@media(max-width:480px) { #portfolio-review .pf-research-vision { gap: 14px; } #portfolio-review .pf-vision-goal { font-size: 17px; } }
